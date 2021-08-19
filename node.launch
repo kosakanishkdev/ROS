@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<launch>
+
+        <node name="node_1" pkg="mypkg" type="node_1.py"/>
+        <node name="node_2" pkg="mypkg" type="node_2.py"/>
+        <node name="node_3" pkg="mypkg" type="node_3.py"/>
+</launch>

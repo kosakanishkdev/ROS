@@ -1,0 +1,8 @@
+<launch>
+	<node name="turtlebot" pkg="turtlesim" type="turtlesim_node"/>
+    <node name="move" pkg="turtle" type="star_fin.py"/>
+    <node name="turtlesim_node" pkg="turtlesim" type="turtlesim_node"/>
+    <node name="operate" pkg="turtlesim" type="turtle_teleop_key"/>
+    <node name="recorder" pkg="rosbag" type="record"/>
+    <node name="player" pkg="rosbag" type="play"/>
+</launch>

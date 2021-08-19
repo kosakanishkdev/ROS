@@ -1,0 +1,4 @@
+<launch>
+	<node name="turtlebot" pkg="turtlesim" type="turtlesim_node"/>
+    <node name="move" pkg="turtle" type="star_fin.py"/>
+</launch>
