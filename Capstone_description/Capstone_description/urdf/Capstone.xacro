@@ -1,0 +1,194 @@
+<?xml version="1.0" ?>
+<robot name="Capstone" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find Capstone_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find Capstone_description)/urdf/Capstone.trans" />
+<xacro:include filename="$(find Capstone_description)/urdf/Capstone.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.007333091070869468 -7.78480598572087e-14 0.36099165808346584"/>
+    <mass value="7.557165209995007"/>
+    <inertia ixx="0.455001" ixy="0.0" ixz="0.003127" iyy="0.450316" iyz="-0.0" izz="0.244734"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Capstone_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Capstone_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.3877787807814457e-17 9.650038500203379e-18 0.030000000000000027"/>
+    <mass value="0.4995132319207772"/>
+    <inertia ixx="0.000462" ixy="-0.0" ixz="0.0" iyy="0.000462" iyz="0.0" izz="0.000624"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.09 -0.0 -0.345"/>
+    <geometry>
+      <mesh filename="package://Capstone_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.09 -0.0 -0.345"/>
+    <geometry>
+      <mesh filename="package://Capstone_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="pi_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.18603452748026733 -0.006754008365086289 0.005888830680916862"/>
+    <mass value="0.018191716731074097"/>
+    <inertia ixx="6e-06" ixy="-0.0" ixz="-1e-06" iyy="1.1e-05" iyz="0.0" izz="1.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.2 -0.0 -0.11"/>
+    <geometry>
+      <mesh filename="package://Capstone_description/meshes/pi_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.2 -0.0 -0.11"/>
+    <geometry>
+      <mesh filename="package://Capstone_description/meshes/pi_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_back_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-2.7755575615628914e-17 -0.025000000000000078 0.0"/>
+    <mass value="0.8217228284545802"/>
+    <inertia ixx="0.001327" ixy="0.0" ixz="-0.0" iyy="0.002311" iyz="0.0" izz="0.001327"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.125 0.25 -0.075"/>
+    <geometry>
+      <mesh filename="package://Capstone_description/meshes/right_back_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.125 0.25 -0.075"/>
+    <geometry>
+      <mesh filename="package://Capstone_description/meshes/right_back_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_front_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.3877787807814457e-17 -0.025000000000000022 0.0"/>
+    <mass value="0.8217228284545802"/>
+    <inertia ixx="0.001327" ixy="0.0" ixz="-0.0" iyy="0.002311" iyz="0.0" izz="0.001327"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.125 0.25 -0.075"/>
+    <geometry>
+      <mesh filename="package://Capstone_description/meshes/right_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.125 0.25 -0.075"/>
+    <geometry>
+      <mesh filename="package://Capstone_description/meshes/right_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_front_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.3877787807814457e-17 0.025000000000000022 0.0"/>
+    <mass value="0.8217228284545802"/>
+    <inertia ixx="0.001327" ixy="-0.0" ixz="-0.0" iyy="0.002311" iyz="0.0" izz="0.001327"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.125 -0.25 -0.075"/>
+    <geometry>
+      <mesh filename="package://Capstone_description/meshes/left_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.125 -0.25 -0.075"/>
+    <geometry>
+      <mesh filename="package://Capstone_description/meshes/left_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_back_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-2.7755575615628914e-17 0.025000000000000022 0.0"/>
+    <mass value="0.8217228284545802"/>
+    <inertia ixx="0.001327" ixy="-0.0" ixz="-0.0" iyy="0.002311" iyz="0.0" izz="0.001327"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.125 -0.25 -0.075"/>
+    <geometry>
+      <mesh filename="package://Capstone_description/meshes/left_back_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.125 -0.25 -0.075"/>
+    <geometry>
+      <mesh filename="package://Capstone_description/meshes/left_back_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid2" type="fixed">
+  <origin rpy="0 0 0" xyz="0.09 0.0 0.345"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+</joint>
+
+<joint name="Rigid3" type="fixed">
+  <origin rpy="0 0 0" xyz="0.2 0.0 0.11"/>
+  <parent link="base_link"/>
+  <child link="pi_1"/>
+</joint>
+
+<joint name="Rev4" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.125 -0.25 0.075"/>
+  <parent link="base_link"/>
+  <child link="right_back_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev5" type="continuous">
+  <origin rpy="0 0 0" xyz="0.125 -0.25 0.075"/>
+  <parent link="base_link"/>
+  <child link="right_front_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev6" type="continuous">
+  <origin rpy="0 0 0" xyz="0.125 0.25 0.075"/>
+  <parent link="base_link"/>
+  <child link="left_front_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev7" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.125 0.25 0.075"/>
+  <parent link="base_link"/>
+  <child link="left_back_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+</robot>
