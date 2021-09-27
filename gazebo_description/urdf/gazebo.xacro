@@ -1,0 +1,168 @@
+<?xml version="1.0" ?>
+<robot name="gazebo" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find gazebo_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find gazebo_description)/urdf/gazebo.trans" />
+<xacro:include filename="$(find gazebo_description)/urdf/gazebo.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.561071305219882e-17 -7.122142610439764e-17 0.05866731662928983"/>
+    <mass value="12.029301516853476"/>
+    <inertia ixx="0.069948" ixy="0.0" ixz="0.0" iyy="0.065415" iyz="0.0" izz="0.089585"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://gazebo_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://gazebo_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.220446049250313e-18 0.0 0.030000000000000027"/>
+    <mass value="4.476062673018396"/>
+    <inertia ixx="0.004728" ixy="0.0" ixz="0.0" iyy="0.004728" iyz="0.0" izz="0.00677"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.0 0.0 -0.12"/>
+    <geometry>
+      <mesh filename="package://gazebo_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.0 0.0 -0.12"/>
+    <geometry>
+      <mesh filename="package://gazebo_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="6.938893903907228e-18 0.005000000000000032 1.734723475976807e-17"/>
+    <mass value="0.22195352097611884"/>
+    <inertia ixx="5.2e-05" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="5.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.05 -0.12 -0.025"/>
+    <geometry>
+      <mesh filename="package://gazebo_description/meshes/wheel_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.05 -0.12 -0.025"/>
+    <geometry>
+      <mesh filename="package://gazebo_description/meshes/wheel_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.3877787807814457e-17 0.0050000000000000044 6.938893903907228e-18"/>
+    <mass value="0.22195352097611887"/>
+    <inertia ixx="5.2e-05" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="5.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.05 -0.12 -0.025"/>
+    <geometry>
+      <mesh filename="package://gazebo_description/meshes/wheel_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.05 -0.12 -0.025"/>
+    <geometry>
+      <mesh filename="package://gazebo_description/meshes/wheel_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="4.163336342344337e-17 -0.004999999999999963 2.42861286636753e-17"/>
+    <mass value="0.22195352097611876"/>
+    <inertia ixx="5.2e-05" ixy="-0.0" ixz="0.0" iyy="0.0001" iyz="-0.0" izz="5.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.05 0.12 -0.025"/>
+    <geometry>
+      <mesh filename="package://gazebo_description/meshes/wheel_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.05 0.12 -0.025"/>
+    <geometry>
+      <mesh filename="package://gazebo_description/meshes/wheel_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.0816681711721685e-17 -0.0050000000000000044 -6.938893903907228e-18"/>
+    <mass value="0.22195352097611892"/>
+    <inertia ixx="5.2e-05" ixy="-0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="5.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.05 0.12 -0.025"/>
+    <geometry>
+      <mesh filename="package://gazebo_description/meshes/wheel_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.05 0.12 -0.025"/>
+    <geometry>
+      <mesh filename="package://gazebo_description/meshes/wheel_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rev1" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.12"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="Rev2" type="continuous">
+  <origin rpy="0 0 0" xyz="0.05 0.12 0.025"/>
+  <parent link="base_link"/>
+  <child link="wheel_3_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev3" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.05 0.12 0.025"/>
+  <parent link="base_link"/>
+  <child link="wheel_4_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev4" type="continuous">
+  <origin rpy="0 0 0" xyz="0.05 -0.12 0.025"/>
+  <parent link="base_link"/>
+  <child link="wheel_2_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Rev5" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.05 -0.12 0.025"/>
+  <parent link="base_link"/>
+  <child link="wheel_1_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+</robot>
